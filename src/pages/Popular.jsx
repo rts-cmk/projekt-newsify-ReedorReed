@@ -1,5 +1,16 @@
-import React from 'react';
+import { React, useEffect } from 'react';
+import Header from '../components/Header/Header';
+import NavBar from '../components/NavBar/NavBar';
 
 export default function Popular() {
-	return <div>Popular</div>;
+	useEffect(() => {
+		localStorage.setItem('hasLeftLogin', JSON.stringify(true));
+	}, []);
+	return (
+		<div>
+			Popular
+			<Header />
+			<NavBar />
+		</div>
+	);
 }

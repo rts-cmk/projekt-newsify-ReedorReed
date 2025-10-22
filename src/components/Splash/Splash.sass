@@ -1,4 +1,15 @@
 @use '../../style/_variables' as var
+
+@keyframes logoGrow
+    0%
+        transform: scale(3)
+        opacity: 0
+    40%
+        transform: scale(3)
+        opacity: 0
+    100%
+        transform: scale(1)
+        opacity: 1
     
 .splash
     display: flex
@@ -11,6 +22,7 @@
     &__logo
         height: 252px
         width: 174px
+        animation: logoGrow 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards
 
     &__title
         font-family: var.$font-main-heading
@@ -18,3 +30,4 @@
         font-weight: 900
         color: var.$color-heading-black
         margin: 28px 0
+        animation: logoGrow 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards
