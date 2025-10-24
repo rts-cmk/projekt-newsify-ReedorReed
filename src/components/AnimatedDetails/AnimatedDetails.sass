@@ -1,0 +1,35 @@
+@use '../../style/_variables' as var
+
+.animated-details
+    border: 1px solid var.$color-gray
+    border-width: 1px 0 0 0
+    padding: 1rem
+    height: 60px
+    transition: height 0.5s ease
+    overflow: hidden
+
+    &:last-of-type
+        border-bottom-width: 1px
+    
+    &__summary
+        list-style: none
+        text-transform: uppercase
+        display: flex
+        align-items: center
+        justify-content: space-between
+        
+    &__summary-header
+        display: flex
+        align-items: center
+        gap: 14px
+    
+    &__arrow
+        transition: transform 0.3s ease
+        transform: rotate(0deg)
+    
+    &[open] &__arrow
+        transform: rotate(90deg)
+
+    &__logo
+        height: 26px
+        width: 18px
