@@ -27,7 +27,7 @@ export default function AnimatedDetails({ title, children, ...props }) {
 					</div>
 					<IoChevronForwardOutline className="animated-details__arrow" />
 				</summary>
-				{children}
+				<div className="animated-details__summary-content">{children}</div>
 			</details>
 		</>
 	);

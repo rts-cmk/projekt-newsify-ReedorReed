@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 
-const useFetch = (url) => {
+const useFetch = (url, delay = 0) => {
 	const [data, setData] = useState(null);
 	const [isPending, setIsPending] = useState(true);
 	const [error, setError] = useState(null);
 
 	useEffect(() => {
-		setTimeout(() => {
+		const timer = setTimeout(() => {
 			fetch(url)
 				.then((response) => {
 					if (!response.ok) {
@@ -20,10 +20,16 @@ const useFetch = (url) => {
 					setError(null);
 				})
 				.catch((err) => {
+					console.log(err.message);
 					setIsPending(false);
 					setError(err.message);
 				});
-		}, 1000);
-	}, [url]);
+		}, delay);
+
+		return () => clearTimeout(timer);
+	}, [url, delay]);
+
+	return { data, isPending, error };
 };
+
 export default useFetch;
