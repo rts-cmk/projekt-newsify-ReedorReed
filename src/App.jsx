@@ -8,6 +8,7 @@ import './style/main.sass';
 import { useEffect, useState } from 'react';
 import SplashScreen from './components/Splash/Splash';
 import Onboarding from './components/Onboarding/Onboarding';
+import React from 'react';
 
 function App() {
 	const hasCompletedOnboarding = JSON.parse(
