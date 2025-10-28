@@ -42,10 +42,6 @@ export default function Onboarding({ onComplete }) {
 		}
 	};
 
-	// function navigateLogin() {
-	// 	navigate('/login');
-	// }
-
 	return (
 		<>
 			<section className="onboarding-screen">
