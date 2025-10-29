@@ -1,5 +1,5 @@
 const API_KEY = import.meta.env.VITE_API_KEY;
-const BASE_URL = 'https://api.nytimes.com/svc/mostpopular/v2/';
+const BASE_URL = 'https://api.nytimes.com/svc/';
 
 async function fetchData(base, endpoint) {
 	const url = new URL(endpoint, base);
@@ -13,7 +13,24 @@ async function fetchData(base, endpoint) {
 }
 
 async function getPopularViewed(days = 1) {
-	return fetchData(BASE_URL, `viewed/${days}.json`);
+	return fetchData(BASE_URL, `mostpopular/v2/viewed/${days}.json`);
 }
 
 export { getPopularViewed };
+
+async function getHealthStories(section) {
+	return fetchData(BASE_URL, `topstories/v2/${section}.json`);
+}
+
+export { getHealthStories };
+
+async function getFoodStories(section) {
+	return fetchData(BASE_URL, `topstories/v2/${section}.json`);
+}
+export { getFoodStories };
+
+async function getTravelStories(section) {
+	return fetchData(BASE_URL, `topstories/v2/${section}.json`);
+}
+
+export { getTravelStories };

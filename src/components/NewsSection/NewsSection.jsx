@@ -4,9 +4,12 @@ import useFetch from '../useFetch/useFetch';
 
 export default function NewsSection({ title, section, delay = 0 }) {
 	const API_KEY = import.meta.env.VITE_API_KEY;
+	const ONE_HOUR = 60 * 60 * 1000; // hours in milliseconds
+
 	const { data, isPending, error } = useFetch(
 		`https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=${API_KEY}`,
-		delay
+		delay,
+		ONE_HOUR // Cache for 1 hour
 	);
 
 	return (
