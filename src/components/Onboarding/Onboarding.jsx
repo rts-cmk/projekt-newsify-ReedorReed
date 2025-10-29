@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import firstImage from '../assets/Onboarding-image1.png';
-import secondImage from '../assets/Onboarding-image2.png';
-import thirdImage from '../assets/Onboarding-image3.png';
+import firstImage from '../assets/onboarding-image1.png';
+import secondImage from '../assets/onboarding-image2.png';
+import thirdImage from '../assets/onboarding-image3.png';
 import './Onboarding.sass';
 import { useNavigate } from 'react-router';
 
