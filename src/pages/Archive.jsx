@@ -8,7 +8,6 @@ export default function Archive() {
 	}, []);
 	return (
 		<div>
-			Archive
 			<Header />
 			<NavBar />
 		</div>

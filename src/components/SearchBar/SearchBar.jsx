@@ -8,7 +8,7 @@ export default function SearchBar() {
 				<form action="./search/">
 					<input
 						type="search"
-						name="search-news"
+						name="q"
 						id="search-news"
 						placeholder="Search news"
 						className="search-bar__input"
