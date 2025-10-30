@@ -63,11 +63,11 @@ export default function Popular() {
 			<AnimatedDetails title="Health" name="news">
 				{renderArticles(filterArticlesBySection('health'))}
 			</AnimatedDetails>
-			<AnimatedDetails title="Sports" name="news">
-				{renderArticles(filterArticlesBySection('sports'))}
+			<AnimatedDetails title="Food" name="news">
+				{renderArticles(filterArticlesBySection('food'))}
 			</AnimatedDetails>
-			<AnimatedDetails title="World" name="news">
-				{renderArticles(filterArticlesBySection('world'))}
+			<AnimatedDetails title="Travel" name="news">
+				{renderArticles(filterArticlesBySection('travel'))}
 			</AnimatedDetails>
 			<NavBar />
 		</section>

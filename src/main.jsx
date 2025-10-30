@@ -7,11 +7,14 @@ import '@fontsource/playfair-display/700.css';
 import '@fontsource/playfair-display/900.css';
 import '@fontsource/open-sans/400.css';
 import '@fontsource/open-sans/600.css';
+import { CategoryProvider } from './components/TurnOnOffCategories/CategoryContext.jsx';
 
 createRoot(document.getElementById('root')).render(
 	<StrictMode>
-		<BrowserRouter>
-			<App />
-		</BrowserRouter>
+		<CategoryProvider>
+			<BrowserRouter>
+				<App />
+			</BrowserRouter>
+		</CategoryProvider>
 	</StrictMode>
 );

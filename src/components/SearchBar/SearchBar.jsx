@@ -1,5 +1,20 @@
 import React from 'react';
+import './SearchBar.sass';
 
 export default function SearchBar() {
-	return <div>SearchBar</div>;
+	return (
+		<>
+			<search className="search-bar">
+				<form action="./search/">
+					<input
+						type="search"
+						name="search-news"
+						id="search-news"
+						placeholder="Search news"
+						className="search-bar__input"
+					/>
+				</form>
+			</search>
+		</>
+	);
 }
