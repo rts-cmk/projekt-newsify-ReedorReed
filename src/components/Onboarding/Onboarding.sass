@@ -1,0 +1,93 @@
+@use '../../style/_variables' as var
+@use '../../style/_mixins'
+
+.onboarding-screen
+    display: flex
+    flex-direction: column
+    height: 100vh
+    padding: 20px
+
+    &__welcome
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        height: 100%
+
+
+    &__welcome-slide
+        display: none
+
+    &__title
+        font-family: var.$font-main-heading
+        font-size: 32px
+        font-weight: 900
+        color: var.$color-heading-black
+        text-align: center
+        margin-bottom: 24px
+
+    
+    &__text
+        font-family: var.$font-text
+        font-size: 18px
+        font-weight: 400
+        color: var.$color-heading-black
+        text-align: center
+
+.active
+    display: flex
+
+.dots
+    display: flex
+    flex-direction: row
+    margin-bottom: 4rem
+    width: 100vw
+    justify-content: center
+
+    &__dot
+        display: flex
+        height: 15px
+        width: 15px
+        margin: 0 10px
+        border-radius: 50%
+        background-color: var.$color-gray
+        cursor: pointer
+
+.dots
+    @include mixins.phoneSmall
+        margin-bottom: 2rem
+
+.active-dot
+    background-color: var.$color-green
+    height: 15px
+    width: 66px
+    border-radius: 16px
+
+
+.button-container
+    width: 100%
+    display: flex
+    justify-content: space-around
+    margin-bottom: 2rem
+
+    &__skip
+        width: 166px
+        height: 62px
+        background-color: var.$color-white
+        border: 1px solid  var.$color-green
+        border-radius: 40px
+        font-family: var.$font-text
+        font-size: 18px
+        font-weight: 600
+        color:  var.$color-green
+    
+    &__continue
+        width: 166px
+        height: 62px
+        background-color: var.$color-green
+        border: 1px solid  var.$color-green
+        border-radius: 40px
+        font-family: var.$font-text
+        font-size: 18px
+        font-weight: 600
+        color:  var.$color-white
