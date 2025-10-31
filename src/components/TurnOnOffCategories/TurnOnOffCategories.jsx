@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { useCategories } from './CategoryContext';
+import { useCategories } from '../../context/CategoryContext';
 import Logo from '../assets/newsify-logo.svg';
 import './TurnOnOffCategories.sass';
 

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Logo from '../assets/newsify-logo.svg';
-import '../style/_layout.sass';
+import '../style/_login.sass';
 import { useNavigate } from 'react-router';
 
 export default function Login() {

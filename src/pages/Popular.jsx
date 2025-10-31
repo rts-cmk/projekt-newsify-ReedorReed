@@ -4,6 +4,7 @@ import NavBar from '../components/NavBar/NavBar';
 import AnimatedDetails from '../components/AnimatedDetails/AnimatedDetails';
 import { getPopularViewed } from '../helpers/nyt-api';
 import '../style/_layout.sass';
+import NYTCredit from '../components/NYTCredit/NYTCredit';
 
 export default function Popular() {
 	useEffect(() => {
@@ -69,6 +70,8 @@ export default function Popular() {
 			<AnimatedDetails title="Travel" name="news">
 				{renderArticles(filterArticlesBySection('travel'))}
 			</AnimatedDetails>
+
+			<NYTCredit />
 			<NavBar />
 		</section>
 	);
