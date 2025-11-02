@@ -1,0 +1,17 @@
+import { render, screen } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
+import Header from './Header';
+
+describe('Header', () => {
+    it('should render an h1 element', () => {
+        render(<Header />);
+        const heading = screen.getByRole('heading', { level: 1 });
+        expect(heading).toBeInTheDocument();
+    });
+
+    it('should render h1 with correct text', () => {
+        render(<Header />);
+        const heading = screen.getByRole('heading', { level: 1, name: /newsify/i });
+        expect(heading).toBeInTheDocument();
+    });
+});

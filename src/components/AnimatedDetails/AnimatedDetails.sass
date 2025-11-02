@@ -1,0 +1,52 @@
+@use '../../style/_variables' as var
+
+.animated-details
+    border: 1px solid var.$color-gray
+    border-width: 1px 0 0 0
+    padding: 1rem
+
+    &:last-of-type
+        border-bottom-width: 1px
+    
+    &__summary
+        list-style: none
+        text-transform: uppercase
+        display: flex
+        align-items: center
+        justify-content: space-between
+        cursor: pointer
+
+        
+    &__summary-header
+        display: flex
+        align-items: center
+        gap: 14px
+        font-family: var.$font-main-heading
+        font-size: 16px
+        font-weight: 900
+        color: var.$color-heading-black
+
+    
+    &__arrow
+        transition: transform 0.3s ease
+        transform: rotate(0deg)
+    
+    &[open] &__arrow
+        transform: rotate(90deg)
+
+    &__logo
+        height: 26px
+        width: 18px
+
+    &__summary-content
+        margin-top: 2rem
+        display: grid
+        grid-template-rows: 0fr
+        transition: grid-template-rows 0.5s ease
+        overflow: hidden
+
+        & > *
+            min-height: 0
+
+    &[open] &__summary-content
+        grid-template-rows: 1fr
